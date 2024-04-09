@@ -8,7 +8,7 @@ export interface CardProps {
 
 export const Card = ({ title, status_icon, icon, amount }) => {
     return (
-        <div className="bg-white p-[25px] uppercase  w-full">
+        <div className="bg-white p-[25px] uppercase  w-full rounded-md transition ease-out delay-200 hover:drop-shadow-md hover:translate-y-[-2px] ">
             <div className="flex justify-between items-center">
                 <p className="font-medium text-sm text-[#A2A2A2]"> {title} </p>
                 {status_icon}

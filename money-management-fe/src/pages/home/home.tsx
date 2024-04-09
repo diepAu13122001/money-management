@@ -8,7 +8,7 @@ export const Home = () => {
     const cards: CardProps[] = [
         {
             title: "CAMPAIGN SENT",
-            status_icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-3.5 text-[#52AC30]">
+            status_icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-4 text-[#52AC30]">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
             </svg>
             ),
@@ -21,7 +21,7 @@ export const Home = () => {
 
         {
             title: "ANNUAL PROFIT",
-            status_icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-3.5 text-[#FF2D00]">
+            status_icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-4 text-[#FF2D00]">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
             </svg>
             ),
@@ -32,7 +32,7 @@ export const Home = () => {
         },
         {
             title: "CAMPAIGN SENT",
-            status_icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-3.5">
+            status_icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-4">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m15 11.25-3-3m0 0-3 3m3-3v7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
             </svg>
             ),
@@ -45,7 +45,7 @@ export const Home = () => {
 
         {
             title: "ANNUAL PROFIT",
-            status_icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-3.5">
+            status_icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-4">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
             </svg>
             ),
@@ -59,14 +59,18 @@ export const Home = () => {
     return (
         <div className="grid grid-cols-5">
             <VNav />
-            <main className="col-span-4 bg-slate-200">
+            <main className="col-span-4 bg-[#f3f3f8]">
                 <HNav />
-                <section id="digits" className="p-[20px]">
-                    <div className=" grid grid-flow-col w-full divide-x divide-slate-300 ">
+                <section id="digits" className="p-[20px] pb-0">
+                    <div className=" grid grid-flow-col w-full gap-3">
                         {cards.map(item =>
                             <Card title={item.title} icon={item.icon} status_icon={item.status_icon} amount={item.amount} />
                         )}
                     </div>
+                </section>
+
+                <section id="charts" className="p-[20px] pb-0">
+                        
                 </section>
 
             </main>
