@@ -43,7 +43,7 @@ export const VNav = () => {
     const [activeMenuIndex, setActiveMenuIndex] = useState(0);
 
     return (
-        <nav className="h-screen bg-black p-5 text-white">
+        <nav className="h-screen bg-black p-5 text-white w-[300px]">
             <h1 className="uppercase text-center font-extrabold text-lg
             my-6">mylogo</h1>
             <div className="text-[#C2C2C2] font-bold">
@@ -53,7 +53,7 @@ export const VNav = () => {
                             className={`cursor-pointer block w-full hover:text-white ${idx === activeMenuIndex ? "text-white" : "text-[#C2C2C2]"}
                                 }`}
                             onClick={() => setActiveMenuIndex(idx)}>
-                            <a href="#" className="flex leading-[50px] items-center">{item.icon} {item.label} </a> </li>
+                            <a href="#" className="focus:outline-none flex leading-[50px] items-center">{item.icon} {item.label} </a> </li>
                     ))}
                 </ul>
             </div>

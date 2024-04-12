@@ -2,6 +2,9 @@ import React from "react";
 import { VNav } from "../../components/ver_nav";
 import { HNav } from "../../components/hor_nav";
 import { Card, CardProps } from "../../components/card";
+import { Footer } from "../../components/footer";
+import { Chart, ChartProps } from "../../components/chart";
+import { Table, tableProps } from "../../components/table";
 
 
 export const Home = () => {
@@ -55,25 +58,239 @@ export const Home = () => {
             amount: "$489.4k",
         },
     ]
+    const data01 = [
+        {
+            "name": "Group A",
+            "value1": 1,
+            "value2": 9,
+            "value3": 4,
+            "value4": 13,
+            "fill": "#57c0e8",
+        },
+
+        {
+            "name": "Group B",
+            "value1": 15,
+            "value2": 16,
+            "value3": 5,
+            "value4": 2,
+            "fill": "purple",
+
+        },
+
+        {
+            "name": "Group C",
+            "value1": 10,
+            "value2": 1,
+            "value3": 16,
+            "value4": 9,
+            "fill": "#FFDA83",
+        },
+
+        {
+            "name": "Group D",
+            "value1": 1,
+            "value2": 16,
+            "value3": 0,
+            "value4": 7,
+            "fill": "#FF6565",
+        },
+
+    ];
+
+    const charts: ChartProps[] = [
+        {
+            subCharts: [
+                { type: "bar", name: "income", dataKey: "value2", color: "#FF5733" },
+                { type: "line", name: "outcome", dataKey: "value3", color: "#8884d8" },
+            ],
+            data: data01,
+            size: "col-span-3",
+            title: "Balance sheet",
+            sortBy: ["Apple", "Banana", "Orange"],
+            overview_data: [
+                { value: "$584k", subtext: "Revenue" },
+                { value: "$584k", subtext: "Revenue" },
+                { value: "$584k", subtext: "Revenue" },
+            ]
+        },
+        {
+            subCharts: [
+                { type: "pie", name: "overview", dataKey: "value1", color: "#82ca9d" },
+            ],
+            data: data01,
+            size: "col-span-1",
+            title: "Balance sheet",
+            sortBy: ["Apple", "Banana", "Orange"],
+            overview_data: [
+                { value: "$584k", subtext: "Revenue" },
+                { value: "$584k", subtext: "Revenue" },
+                { value: "$584k", subtext: "Revenue" },
+            ]
+        }
+    ]
+
+    const tableData: tableProps =
+    {
+        title: ["Customer", "Product", "Amount", "Vender"],
+        data: [
+            {
+                cells: [
+                    {
+                        content: "Alex Smith",
+                        subtext: "17 Jan 2021",
+                        icon: (<img className="object-cover size-[30px] rounded-full" src="https://themesbrand.com/velzon/html/master/assets/images/users/avatar-1.jpg" />),
+                        tabColor: "",
+                        textColor: "",
+                    },
+                    {
+                        content: "6.8K",
+                        subtext: "Price",
+                        icon: (<></>),
+                        tabColor: "",
+                        textColor: "",
+                    },
+                    {
+                        content: "32%",
+                        subtext: "",
+                        icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" />
+                        </svg>
+                        ),
+                        tabColor: "",
+                        textColor: "text-green-700",
+                    },
+                    {
+                        content: "tab name",
+                        subtext: "",
+                        icon: "",
+                        tabColor: "bg-green-200",
+                        textColor: "text-green-700",
+                    }
+                ]
+            },
+            {
+                cells: [
+                    {
+                        content: "Alex Smith",
+                        subtext: "17 Jan 2021",
+                        icon: (<img className="object-cover size-[30px] rounded-full" src="https://themesbrand.com/velzon/html/master/assets/images/users/avatar-1.jpg" />),
+                        tabColor: "",
+                        textColor: "",
+                    },
+                    {
+                        content: "6.8K",
+                        subtext: "Price",
+                        icon: (<></>),
+                        tabColor: "",
+                        textColor: "",
+                    },
+                    {
+                        content: "32%",
+                        subtext: "",
+                        icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6 9 12.75l4.286-4.286a11.948 11.948 0 0 1 4.306 6.43l.776 2.898m0 0 3.182-5.511m-3.182 5.51-5.511-3.181" />
+                        </svg>
+
+                        ),
+                        tabColor: "",
+                        textColor: "text-red-700",
+                    },
+                    {
+                        content: "tab name",
+                        subtext: "",
+                        icon: "",
+                        tabColor: "bg-red-200",
+                        textColor: "text-red-700",
+                    }
+                ]
+            }
+        ],
+        name: "Recent Orders",
+        sortBy: ["Today", "Yesterday", "Last 7 days", "Last 30 days"],
+        size: "col-span-3"
+    }
+
+    const tableData1: tableProps =
+    {
+        title: ["Customer", "Product"],
+        data: [
+            {
+                cells: [
+                    {
+                        content: "Alex Smith",
+                        subtext: "17 Jan 2021",
+                        icon: (<img className="object-cover size-[30px] rounded-full" src="https://themesbrand.com/velzon/html/master/assets/images/users/avatar-1.jpg" />),
+                        tabColor: "",
+                        textColor: "",
+                    },
+                    {
+                        content: "32%",
+                        subtext: "",
+                        icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6 9 12.75l4.286-4.286a11.948 11.948 0 0 1 4.306 6.43l.776 2.898m0 0 3.182-5.511m-3.182 5.51-5.511-3.181" />
+                        </svg>
+
+                        ),
+                        tabColor: "",
+                        textColor: "text-red-700",
+                    },
+                ]
+            },
+            {
+                cells: [
+                    {
+                        content: "Alex Smith",
+                        subtext: "17 Jan 2021",
+                        icon: (<img className="object-cover size-[30px] rounded-full" src="https://themesbrand.com/velzon/html/master/assets/images/users/avatar-1.jpg" />),
+                        tabColor: "",
+                        textColor: "",
+                    },
+                    {
+                        content: "32%",
+                        subtext: "",
+                        icon: (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6 9 12.75l4.286-4.286a11.948 11.948 0 0 1 4.306 6.43l.776 2.898m0 0 3.182-5.511m-3.182 5.51-5.511-3.181" />
+                        </svg>
+
+                        ),
+                        tabColor: "",
+                        textColor: "text-red-700",
+                    },
+                ]
+            }
+        ],
+        name: "Recent Orders",
+        sortBy: ["Today", "Yesterday", "Last 7 days", "Last 30 days"],
+        size: "col-span-1"
+    }
 
     return (
-        <div className="grid grid-cols-5">
+        <div className="flex">
             <VNav />
-            <main className="col-span-4 bg-[#f3f3f8]">
+            <main className="col-span-4 bg-gray-100 container">
                 <HNav />
-                <section id="digits" className="p-[20px] pb-0">
-                    <div className=" grid grid-flow-col w-full gap-3">
+                <section id="digits" className="p-[20px] pt-0 w-full">
+                    <div className=" grid grid-flow-col gap-3">
                         {cards.map(item =>
                             <Card title={item.title} icon={item.icon} status_icon={item.status_icon} amount={item.amount} />
                         )}
                     </div>
                 </section>
 
-                <section id="charts" className="p-[20px] pb-0">
-                        
+                <section id="main-data" className="p-[20px] pt-0 grid grid-cols-4 gap-3">
+                    {charts.map((chart) =>
+                        <Chart data={chart.data} overview_data={chart.overview_data} size={chart.size} sortBy={chart.sortBy} subCharts={chart.subCharts} title={chart.title} />
+                    )}
+
+                    <Table tableData={tableData1} />
+                    <Table tableData={tableData} />
                 </section>
 
+                <Footer />
             </main>
+
+
         </div>
 
     );
