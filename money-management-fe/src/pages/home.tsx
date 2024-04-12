@@ -1,10 +1,10 @@
 import React from "react";
-import { VNav } from "../../components/ver_nav";
-import { HNav } from "../../components/hor_nav";
-import { Card, CardProps } from "../../components/card";
-import { Footer } from "../../components/footer";
-import { Chart, ChartProps } from "../../components/chart";
-import { Table, tableProps } from "../../components/table";
+import { VNav } from "./../components/ver_nav";
+import { HNav } from "./../components/hor_nav";
+import { Card, CardProps } from "./../components/card";
+import { Footer } from "./../components/footer";
+import { Chart, ChartProps } from "./../components/chart";
+import { Table, tableProps } from "./../components/table";
 
 
 export const Home = () => {
@@ -268,7 +268,7 @@ export const Home = () => {
     return (
         <div className="flex">
             <VNav />
-            <main className="col-span-4 bg-gray-100 container">
+            <main className="h-screen overflow-scroll scroll-smooth scroll-m-0 col-span-4 bg-gray-100 container">
                 <HNav />
                 <section id="digits" className="p-[20px] pt-0 w-full">
                     <div className=" grid grid-flow-col gap-3">

@@ -20,7 +20,7 @@ export interface tableProps {
   size: string;
 }
 
-export const Table = ({tableData }) => {
+export const Table = ({ tableData }) => {
 
   return (
     <div className={`divide-y divide-gray-200 ${tableData.size} bg-white rounded-md drop-shadow-sm`}>
