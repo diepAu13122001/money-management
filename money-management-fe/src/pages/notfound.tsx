@@ -1,10 +1,10 @@
 import React from "react";
 
-export const Account = () => {
+export const NotFound = () => {
 
     return (
         <div>
-            account
+            not found
         </div>
 
 

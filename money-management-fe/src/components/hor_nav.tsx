@@ -3,17 +3,17 @@ export const HNav = () => {
 
 
     return (
-        <div className="w-full h-fit bg-white divide-y divide-gray-300 mb-[20px]">
+        <div className="w-full h-fit bg-white shadow-md mb-[20px] sticky top-0 z-50">
             <div className="py-[10px] px-[20px] flex justify-between items-center">
-                <div className="flex justify-start items-center p-[8px]">
+                <div className="flex justify-start items-center ">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" id="menu-btn" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="cursor-pointer size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
                     <div className="border-2 border-gray-100 w-56 ml-2 p-2 flex bg-gray-100 rounded-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                         </svg>
-                        <input type="text" id="search-inp" className="ml-2 bg-transparent p-0 outline-none" placeholder="Search..." />
+                        <input type="text" id="search-inp" className="text-sm ml-2 bg-transparent p-0 outline-none" placeholder="Search..." />
                     </div>
                 </div>
 
@@ -29,10 +29,7 @@ export const HNav = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-between py-[10px] px-[20px]">
-                <p id="page-name" className="font-bold text-base">DASHBOARD</p>
-                <p id="page-link" className="font-light text-sm">Dashboard {" > "} Project</p>
-            </div>
+
         </div>
     );
 };

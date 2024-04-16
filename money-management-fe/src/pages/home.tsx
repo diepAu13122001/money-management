@@ -266,32 +266,28 @@ export const Home = () => {
     }
 
     return (
-        <div className="flex">
-            <VNav />
-            <main className="h-screen overflow-scroll scroll-smooth scroll-m-0 col-span-4 bg-gray-100 container">
-                <HNav />
-                <section id="digits" className="p-[20px] pt-0 w-full">
-                    <div className=" grid grid-flow-col gap-3">
-                        {cards.map(item =>
-                            <Card title={item.title} icon={item.icon} status_icon={item.status_icon} amount={item.amount} />
-                        )}
-                    </div>
-                </section>
-
-                <section id="main-data" className="p-[20px] pt-0 grid grid-cols-4 gap-3">
-                    {charts.map((chart) =>
-                        <Chart data={chart.data} overview_data={chart.overview_data} size={chart.size} sortBy={chart.sortBy} subCharts={chart.subCharts} title={chart.title} />
+        <div>
+            <section id="digits" className="p-[20px] pt-0 w-full">
+                <div className=" grid grid-flow-col gap-3">
+                    {cards.map(item =>
+                        <Card title={item.title} icon={item.icon} status_icon={item.status_icon} amount={item.amount} />
                     )}
+                </div>
+            </section>
 
-                    <Table tableData={tableData1} />
-                    <Table tableData={tableData} />
-                </section>
+            <section id="main-data" className="p-[20px] pt-0 grid grid-cols-4 gap-3">
+                {charts.map((chart) =>
+                    <Chart data={chart.data} overview_data={chart.overview_data} size={chart.size} sortBy={chart.sortBy} subCharts={chart.subCharts} title={chart.title} />
+                )}
 
-                <Footer />
-            </main>
+                <Table tableData={tableData1} />
+                <Table tableData={tableData} />
+            </section>
 
+            <Footer />
 
         </div>
+
 
     );
 

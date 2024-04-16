@@ -1,10 +1,10 @@
 import React from "react";
 
-export const Account = () => {
+export const Setting = () => {
 
     return (
         <div>
-            account
+            setting
         </div>
 
 

@@ -45,7 +45,7 @@ export const Chart = ({ subCharts, data, size, title, sortBy, overview_data }) =
       return (
         <PieChart width={730} height={250}>
           <Legend iconSize={10} />
-          <Pie data={data} dataKey="value1" nameKey="name" name="expense" cx="50%" cy="50%" innerRadius={60} outerRadius={80} fill="#fff" label />
+          <Pie data={data} dataKey="value1" nameKey="name" cx="50%" cy="50%" innerRadius={40} outerRadius={80} fill="#fff" label />
         </PieChart>
       )
     } else {
